@@ -2,7 +2,7 @@ var axios = require("axios");
 
 async function main() {
   let pageSize = 100;
-  let pageNumber = 2;
+  let pageNumber = 3;
   let anotherPage = true;
 
   let products = [];
