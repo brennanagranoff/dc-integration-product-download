@@ -13,13 +13,13 @@ async function main() {
 
     console.log(`Fetching page ${pageNumber}...`);
     //make request\
-    let response = await axios.get(
+    var response = await axios.get(
       `https://dcservicestest.azurewebsites.net/api/ProductPriceStockAvailability?code=4uDxNUkiT7KM7E84DUV2rpGCBIbj0wcwKRNBOYEmBIOBAzFu4Aww3g==&page_size=${pageSize}&page_number=${pageNumber}`
     );
     console.log(
       `https://dcservicestest.azurewebsites.net/api/ProductPriceStockAvailability?code=4uDxNUkiT7KM7E84DUV2rpGCBIbj0wcwKRNBOYEmBIOBAzFu4Aww3g==&page_size=${pageSize}&page_number=${pageNumber}`
     );
-    console.log(response.data.length);
+    console.log(response.data);
     //add products to results
     for (let product of response.data) {
       products.push(product);
