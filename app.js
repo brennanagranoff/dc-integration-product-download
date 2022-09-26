@@ -1,7 +1,7 @@
 var axios = require("axios");
 
 async function main() {
-  let pageSize = 200;
+  let pageSize = 100;
   let pageNumber = 1;
   let anotherPage = true;
 
