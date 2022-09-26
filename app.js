@@ -9,7 +9,7 @@ async function main() {
 
   while (anotherPage) {
     //wait 2 seconds to avoid rate limiting
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 5000));
 
     console.log(`Fetching page ${pageNumber}...`);
     //make request\
