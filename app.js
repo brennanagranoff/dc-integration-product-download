@@ -21,6 +21,7 @@ async function main() {
     if (response.data.length < pageSize) {
       anotherPage = false;
     }
+    pageNumber++;
   }
 
   console.log(products.length);
