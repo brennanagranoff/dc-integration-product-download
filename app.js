@@ -8,6 +8,7 @@ async function main() {
   let products = [];
 
   while (anotherPage) {
+    console.log(`Fetching page ${pageNumber}...`);
     //make request\
     let response = await axios.get(
       `https://dcservicestest.azurewebsites.net/api/ProductPriceStockAvailability?code=4uDxNUkiT7KM7E84DUV2rpGCBIbj0wcwKRNBOYEmBIOBAzFu4Aww3g==&page_size=${pageSize}&page_number=${pageNumber}`
