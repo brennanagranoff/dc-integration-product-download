@@ -8,6 +8,9 @@ async function main() {
   let products = [];
 
   while (anotherPage) {
+    //wait 2 seconds to avoid rate limiting
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     console.log(`Fetching page ${pageNumber}...`);
     //make request\
     let response = await axios.get(
