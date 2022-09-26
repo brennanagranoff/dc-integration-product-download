@@ -9,7 +9,7 @@ async function main() {
 
   while (anotherPage) {
     //wait 2 seconds to avoid rate limiting
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     console.log(`Fetching page ${pageNumber}...`);
     //make request\
@@ -19,7 +19,7 @@ async function main() {
     console.log(
       `https://dcservicestest.azurewebsites.net/api/ProductPriceStockAvailability?code=4uDxNUkiT7KM7E84DUV2rpGCBIbj0wcwKRNBOYEmBIOBAzFu4Aww3g==&page_size=${pageSize}&page_number=${pageNumber}`
     );
-    console.log(response.data);
+    console.log(response.data.length);
     //add products to results
     for (let product of response.data) {
       products.push(product);
